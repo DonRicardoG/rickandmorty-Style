@@ -36,29 +36,24 @@ body{
 	background: linear-gradient(0deg, #000, #272727);
 }
 
-.block:before, .block:after {
-   content: '';
-	position: absolute;
-	left: -2px;
-	top: -2px;
-	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-		#0000ff, #00ff00,#ffff00, #ff0000);
-	background-size: 400%;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	z-index: -1;
-	animation: steam 20s linear infinite;
-}
-
 .card{
    height: 552px;
    width: 430px;
-   margin: auto;
-   border: 13px solid;
+   margin: 30px auto;
+   margin-bottom: 30px;
+   border: 13px solid #F4E137;
+   outline: 5px solid #F4E137;
    border: linear-gradient(0deg, #000, #272727);
    border-radius: 13px;
    margin-bottom: 1rem;
-   transition: 0.3s;
+   transition: outline-offset 300ms ease-out;
+   outline-offset: 5px;
+}
+
+
+.card:hover{
+   outline:#6e661b ;
+   outline-offset: -5px;
 }
 
 .card-content{
@@ -76,7 +71,7 @@ body{
 
 .first-title{
    display: flex;
-   width: 220px;
+   width: 225px;
    justify-content: space-between;
    align-items: center;
 }
