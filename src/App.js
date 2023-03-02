@@ -1,36 +1,18 @@
 import './App.css'
-import Card from './components/Card.jsx'
 import Cards from './components/Cards.jsx'
-import SearchBar from './components/SearchBar.jsx'
-import characters, { Rick } from './data.js'
+import "./fonts/get_schwifty.ttf"
+import characters from './data.js'
+import Navbar from './components/Navbar.jsx'
 
 function App () {
   return (
-    <div className='App' style={{ padding: '25px' }}>
+    <div className='App' style={{ height: '100vh' }}>
       <div>
-        <Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-          tipo ={Rick.tipo}
-          color ={Rick.color}
-          gradient ={Rick.gradient}
-          borderColor={Rick.borderColor}
-          points = {Rick.points}
-        />
+        <Navbar/>
       </div>
-      <hr />
-      <div>
+      <div className='cards-body' id='cardsBody'>
         <Cards
           characters={characters}
-        />
-      </div>
-      <hr />
-      <div>
-        <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
         />
       </div>
     </div>

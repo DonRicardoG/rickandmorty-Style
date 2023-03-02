@@ -1,11 +1,13 @@
-.App {
-   text-align: center;
+@font-face {
+   font-family: 'rickandmorty';
+   src: local('rickandmorty'), url(./fonts/get_schwifty.ttf) format("truetype");
 }
 
 html {
    font-size: 62.5%;
    box-sizing: border-box;
    scroll-padding-top: 0rem;
+   scroll-behavior: smooth;
 }
 *, 
 *:before,
@@ -15,17 +17,89 @@ html {
 
 body{
    font-family: 'Roboto', sans-serif;
-   background-image: url(./photos/pokemonarena.jpg);
+   background-image: url(./photos/Rick-and-Morty-Zoom-Backgrounds-Garage-1.webp);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;
 }
 
+.nav-bar{
+   display: flex;
+   background-color: rgba(0,0,0,0.6);
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   flex-direction: column;
+}
+
+.nav-bar h1{
+   font-family: rickandmorty ;
+   color: #01b4c6;
+   font-size: 40px;
+}
+
+.navbar-img{
+   margin-left: 10px;
+}
+
+.search{
+   display: flex;
+   padding: 20px 0;
+   justify-content: center;
+   align-items: center;
+   margin-right: 10px;
+   position: relative;
+}
+
+.search input{
+   width: 300px;
+   height: 40px;
+   background-color: rgb(1, 180, 198, 0.8);
+   border: none;
+   border-radius: 20px;
+}
+
+.search input::placeholder{
+   color: white;
+   text-align: center;
+   font-size: 20px;
+}
+
+.search-btn{
+   position: absolute;
+   right: 6px;
+   border-radius: 15px;
+   border: none;
+}
+
+.arrow {
+   border: solid rgb(251, 251, 251);
+   border-width: 0 6px 6px 0;
+   display: inline-block;
+   padding: 30px;
+   margin-top: 20px;
+ }
+
+ .down {
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+ }
+
+.cards-body{
+   height: 100vh;
+   background-image: url(./photos/space.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
 
 .card-flex{
    display: flex;
    justify-content: space-evenly;
    height: 100%;
+   align-items: center;
+   background-color: rgb(0, 0, 0, 0.6);
 }
 
 .block {
@@ -37,8 +111,8 @@ body{
 }
 
 .card{
-   height: 552px;
-   width: 430px;
+   height: 480px;
+   width: 22%;
    margin: 30px auto;
    margin-bottom: 30px;
    border: 13px solid #F4E137;
@@ -59,7 +133,6 @@ body{
 .card-content{
    display: flex;
    flex-direction: column;
-   height: 487px;
    justify-content: space-evenly;
 }
 
@@ -77,7 +150,7 @@ body{
 }
 
 .first-title h2{
-   font-size: 24px;
+   font-size: 18px;
    margin: 0;
    margin-top: 5px;
    margin-bottom: 5px;
@@ -106,13 +179,13 @@ body{
 .second-title p{
    margin: 0;
    text-transform: uppercase;
-   font-size: 14px;
+   font-size: 10px;
    color: white;
    font-weight: bold;
 }
 
 .second-title p span{
-   font-size: 32px;
+   font-size: 24px;
 }
 
 .second-title button{
@@ -137,9 +210,8 @@ body{
 }
 
 .card-img img{
-   width: 100%;
-   margin: auto;
-   height: 100%;
+   width: 90%;
+   margin: 0 auto;
    border: 5px solid;
 }
 
@@ -164,16 +236,6 @@ body{
    align-items: center;
 }
 
-.search{
-   display: flex;
-   margin: 10px 0;
-   justify-content: center;
-   align-items: center;
-}
 
-.search input{
-   width: 50%;
-   height: 37px;
-}
 
 
