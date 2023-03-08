@@ -21,16 +21,13 @@ body{
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;
+   background-attachment: fixed;
 }
 
 .nav-bar{
-   display: flex;
-   background-color: rgba(0,0,0,0.6);
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
+   background-color: #01b4c6;
    flex-direction: column;
+   margin: 5px;
 }
 
 .nav-bar h1{
@@ -39,68 +36,29 @@ body{
    font-size: 40px;
 }
 
-.navbar-img{
-   margin-left: 10px;
-}
 
 .search{
    display: flex;
    padding: 20px 0;
-   justify-content: center;
+   justify-content: end;
    align-items: center;
    margin-right: 10px;
-   position: relative;
 }
 
-.search input{
-   width: 300px;
-   height: 40px;
-   background-color: rgb(1, 180, 198, 0.8);
-   border: none;
-   border-radius: 20px;
-}
-
-.search input::placeholder{
-   color: white;
-   text-align: center;
-   font-size: 20px;
-}
 
 .search-btn{
-   position: absolute;
-   right: 6px;
-   border-radius: 15px;
-   border: none;
+   background-color: rgb(1, 132, 1);
+   color: white;
+   padding: 5px;
 }
 
-.arrow {
-   border: solid rgb(251, 251, 251);
-   border-width: 0 6px 6px 0;
-   display: inline-block;
-   padding: 30px;
-   margin-top: 20px;
- }
-
- .down {
-   transform: rotate(45deg);
-   -webkit-transform: rotate(45deg);
- }
-
-.cards-body{
-   height: 100vh;
-   background-image: url(./photos/space.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center center;
+.search-btn:hover{
+   cursor: pointer;
+   background-color: rgb(0, 87, 0);
 }
 
-.card-flex{
-   display: flex;
-   justify-content: space-evenly;
-   height: 100%;
-   align-items: center;
-   background-color: rgb(0, 0, 0, 0.6);
-}
+
+
 
 .block {
 	position: relative;
@@ -113,22 +71,21 @@ body{
 .card{
    height: 480px;
    width: 22%;
+   background-color: white;
    margin: 30px auto;
    margin-bottom: 30px;
-   border: 13px solid #F4E137;
-   outline: 5px solid #F4E137;
-   border: linear-gradient(0deg, #000, #272727);
+   border: 13px solid #16150b;
    border-radius: 13px;
    margin-bottom: 1rem;
-   transition: outline-offset 300ms ease-out;
-   outline-offset: 5px;
 }
 
 
-.card:hover{
-   outline:#6e661b ;
-   outline-offset: -5px;
+.card-flex{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
 }
+
 
 .card-content{
    display: flex;
@@ -144,8 +101,8 @@ body{
 
 .first-title{
    display: flex;
-   width: 225px;
-   justify-content: space-between;
+   width: 200px;
+   justify-content: center;
    align-items: center;
 }
 
@@ -156,24 +113,11 @@ body{
    margin-bottom: 5px;
 }
 
-.first-title p{
-   position: relative;
-   background: rgb(217,217,217);
-   background: linear-gradient(90deg, rgba(217,217,217,1) 57%, rgba(0,0,0,1) 150%);
-   padding: 3px 4px;
-   border: 0 solid;
-   border-radius: 8px;
-   z-index: 1;
-   left: -10px;
-   text-transform: uppercase;
-   margin: 0;
-}
-
 .second-title{
    display: flex;
    align-items: center;
-   width: 110px;
-   justify-content: space-between;
+   width: 90px;
+   justify-content: end;
 }
 
 .second-title p{

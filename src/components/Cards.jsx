@@ -1,7 +1,7 @@
 import Card from './Card';
 
 export default function Cards(props) {
-   const { characters } = props;
+   const { characters, onClose } = props;
    
    return (
       <div className='card-flex'>
@@ -11,12 +11,8 @@ export default function Cards(props) {
                species={character.species}
                gender={character.gender}
                image={character.image}
-               onClose={() => window.alert('Emulamos que se cierra la card')}
-               tipo ={character.tipo}
-               color ={character.color}
-               gradient = {character.gradient}
-               borderColor = {character.borderColor}
-               points = {character.points}
+               onClose={onClose}
+               id = {character.id}
             />
          ))}
       </div>)
