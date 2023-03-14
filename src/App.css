@@ -1,7 +1,3 @@
-@font-face {
-   font-family: 'rickandmorty';
-   src: local('rickandmorty'), url(./fonts/get_schwifty.ttf) format("truetype");
-}
 
 html {
    font-size: 62.5%;
@@ -26,25 +22,74 @@ body{
 
 .nav-bar{
    background-color: #01b4c6;
-   flex-direction: column;
+   flex-direction: row-reverse;
    margin: 5px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 5px;
+   align-items: center;
 }
 
 .nav-bar h1{
-   font-family: rickandmorty ;
-   color: #01b4c6;
-   font-size: 40px;
+   color: #000000;
+   font-size: 20px;
+   margin-left: 1rem;
+   text-decoration: none;
 }
 
 
 .search{
    display: flex;
    padding: 20px 0;
-   justify-content: end;
+   justify-content: flex-end;
    align-items: center;
    margin-right: 10px;
 }
 
+.detail-card{
+   background-color: rgb(0, 0, 0, 0.6);
+   width: 75%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   padding: 2rem;
+   border: 2px solid rgb(46, 224, 240);
+   border-radius: 10px;
+}
+
+.detail-card h1{
+   text-transform: uppercase;
+}
+
+.detail-card h1 span{
+   text-transform: lowercase;
+}
+
+.detail-text{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   color: white;
+}
+
+.detail-btn{
+   display: flex;
+   margin: 15px auto;
+   padding: 9px;
+   width: 10%;
+   justify-content: center;
+   align-items: center;
+   background-color: #01b4c6;
+   border: 1px solid transparent;
+   border-radius: 10px;
+   color: white;
+   transition: 0.3s ease;
+}
+
+.detail-btn:hover{
+   background-color: #007782;
+   cursor: pointer;
+}
 
 .search-btn{
    background-color: rgb(1, 132, 1);
@@ -57,7 +102,17 @@ body{
    background-color: rgb(0, 87, 0);
 }
 
-
+.active {
+   color: rgb(135, 209, 75);
+   font-weight: bold;
+   text-decoration: none;
+   font-size: 25px;
+ }
+ .disable {
+   color: #f6f4e6;
+   text-decoration: none;
+   font-size: 25px;
+ }
 
 
 .block {
@@ -99,6 +154,20 @@ body{
    margin: auto;
 }
 
+.card-about{
+   display: flex;
+   justify-content: center;
+   margin: auto;
+}
+
+.card-contentA{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+}
+
 .first-title{
    display: flex;
    width: 200px;
@@ -117,7 +186,7 @@ body{
    display: flex;
    align-items: center;
    width: 90px;
-   justify-content: end;
+   justify-content: flex-end;
 }
 
 .second-title p{
@@ -146,6 +215,10 @@ body{
 .second-title button:hover{
    background-color: #A60000;
    cursor: pointer;
+}
+
+.text-center{
+   text-align: center;
 }
 
 .card-img{
@@ -178,6 +251,12 @@ body{
    border-radius: 20px;
    height: 36px;
    align-items: center;
+}
+
+.d-flex{
+   display: flex;
+   width: 200px;
+   justify-content: space-evenly;
 }
 
 
