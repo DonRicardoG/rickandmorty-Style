@@ -1,6 +1,6 @@
 import React from 'react'
 import SearchBar from './SearchBar'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = ({onSearch, setCharacters}) => {
   return (
@@ -10,12 +10,13 @@ const Navbar = ({onSearch, setCharacters}) => {
           setCharacters = {setCharacters}
         />
         <div className='d-flex'>
-          <NavLink to={'/'} className={({isActive}) => (isActive ? 'active' : 'disable')} >
+          <NavLink to={'/home'} className={({isActive}) => (isActive ? 'active' : 'disable')} >
             Home
           </NavLink>
           <NavLink to={'about'} className={({isActive}) => (isActive ? 'active' : 'disable') }>
             About
           </NavLink>
+          <Link to={'/'} className='logout'>Log Out</Link>
         </div>
         
     </div>
