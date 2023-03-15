@@ -26,7 +26,7 @@ function App () {
 
  useEffect(() => {
   !access && navigate('/');
-}, [access]);
+}, [access, navigate]);
 
   let location = useLocation();
 
