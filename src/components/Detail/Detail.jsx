@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import style from '../Detail/detail.module.css'
 
 
 const Detail = () => {
@@ -21,7 +22,7 @@ const Detail = () => {
   }, [detailId]);
 
   return (
-    <div>
+    <div className={style.dflex}>
       <div className='detail-card'>
         <div className='detail-text'>
           <h1>Nombre: <span>{character.name}</span></h1>

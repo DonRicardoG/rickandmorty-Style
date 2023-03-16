@@ -1,0 +1,85 @@
+.formDiv{
+    width: 75%;
+    height: 600px;
+    background-color: rgb(0, 0, 0,0.6);
+    margin: auto;
+    margin-top: 10rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+}
+
+.img{
+    width: 50%;
+    background-image: url(../photos/login.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    margin: auto 2rem;
+    border: 1px solid transparent;
+    border-radius: 20px 0 0 20px;
+}
+
+.loginPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.loginPart h1{
+    margin-bottom: 0;
+    color: #AFE067;
+    padding-left: 3rem;
+}
+
+.loginPart p{
+    color: white;
+    padding-left: 3rem;
+    font-size: 15px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+
+.form input{
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+}
+
+.form button{
+    background-color: #68843F;
+    width: 35%;
+    margin: 0 auto;
+    height: 41px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.2s background-color ease;
+}
+
+.form button:hover{
+    background-color: #4f6430;
+    cursor: pointer;
+}
+
+.warning {
+    border: solid red 1px;
+    border-radius: 0.2em;
+    text-align: center;
+  }
+  
+  .danger {
+    font-size: 15px;
+    color: red;
+    text-align: center;
+  }

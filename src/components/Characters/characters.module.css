@@ -1,0 +1,40 @@
+.charactersHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn{
+    background-color: #AFE067;
+    color: #29321B;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-left: 5px;
+    transition: 0.2s background-color ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    height: 45px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #89ad52;
+ }
+
+ .link{
+    text-decoration: none;
+ }
+
+ .flex{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+ }

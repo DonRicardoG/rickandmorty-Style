@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import validate from './validation'
+import style from '../Form/form.module.css'
 
 const Form = ({login}) => {
     const [userData, setUserData] = useState({
@@ -35,28 +36,38 @@ const Form = ({login}) => {
     
     
   return (
-    <div className='form-div'>
-        <form onSubmit={() => handleSubmit(userData)} className='form'>
-            <label>Username</label>
-            <input 
-                type="text" 
-                value={userData.username}
-                name='username'
-                onChange={(e) => handleOnChange(e)}
-                className = {errors.username && 'warning'}
-            />
-            {errors.username ? <p className='danger'>{errors.username}</p> : ''}
-            <label>Password</label>
-            <input 
-                type="text" 
-                value={userData.password}
-                name='password'
-                onChange={(e) => handleOnChange(e)}
-                className = {errors.password && 'warning'}
-            />
-            {errors.password ? <p className='danger'>{errors.password}</p> : ''}
-            <button type='submit'>login</button>
-        </form>
+    <div className={style.formDiv}>
+        <div className={style.img}>
+
+        </div>
+        <div className={style.loginPart}>
+            <div>
+                <h1>Log in</h1>
+                <p>Know better your favorite characters</p>
+            </div>
+            <form onSubmit={() => handleSubmit(userData)} className={style.form}>
+                <input 
+                    type="text" 
+                    value={userData.username}
+                    name='username'
+                    onChange={(e) => handleOnChange(e)}
+                    className = {errors.username && style.warning}
+                    placeholder='Email'
+                />
+                {errors.username ? <p className={style.danger}>{errors.username}</p> : ''}
+                <input 
+                    type="text" 
+                    value={userData.password}
+                    name='password'
+                    onChange={(e) => handleOnChange(e)}
+                    className = {errors.password && style.warning}
+                    placeholder='Password'
+                />
+                {errors.password ? <p className={style.danger}>{errors.password}</p> : ''}
+                <button type='submit'>Log in</button>
+            </form>
+        </div>
+        
     </div>
   )
 }

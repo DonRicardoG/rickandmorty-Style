@@ -13,38 +13,15 @@ html {
 
 body{
    font-family: 'Roboto', sans-serif;
-   background-image: url(./photos/Rick-and-Morty-Zoom-Backgrounds-Garage-1.webp);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-attachment: fixed;
+   background: rgb(175,224,103);
+   background: linear-gradient(180deg, rgba(175,224,103,1) 0%, rgba(138,176,82,1) 12%, rgba(104,132,63,1) 29%, rgba(88,111,54,1) 53%, rgba(67,84,42,1) 70%, rgba(41,50,27,1) 150%);
+   height: 100vh;
 }
 
-.nav-bar{
-   background-color: #01b4c6;
-   flex-direction: row-reverse;
-   margin: 5px;
-   display: flex;
-   justify-content: space-between;
-   padding: 0 5px;
-   align-items: center;
+.vh-100{
+   height: 100vh;
 }
 
-.nav-bar h1{
-   color: #000000;
-   font-size: 20px;
-   margin-left: 1rem;
-   text-decoration: none;
-}
-
-
-.search{
-   display: flex;
-   padding: 20px 0;
-   justify-content: flex-end;
-   align-items: center;
-   margin-right: 10px;
-}
 
 .detail-card{
    background-color: rgb(0, 0, 0, 0.6);
@@ -91,28 +68,7 @@ body{
    cursor: pointer;
 }
 
-.search-btn{
-   background-color: rgb(1, 132, 1);
-   color: white;
-   padding: 5px;
-}
 
-.search-btn:hover{
-   cursor: pointer;
-   background-color: rgb(0, 87, 0);
-}
-
-.active {
-   color: rgb(135, 209, 75);
-   font-weight: bold;
-   text-decoration: none;
-   font-size: 25px;
- }
- .disable {
-   color: #f6f4e6;
-   text-decoration: none;
-   font-size: 25px;
- }
 
 
 .block {
@@ -125,11 +81,10 @@ body{
 
 .card{
    height: 480px;
-   width: 22%;
-   background-color: white;
-   margin: 30px auto;
+   background-color: rgb(0, 0, 0, 0.6);
+   margin: 10px;
    margin-bottom: 30px;
-   border: 13px solid #16150b;
+   border: 13px solid #ffea00ca;
    border-radius: 13px;
    margin-bottom: 1rem;
 }
@@ -139,6 +94,8 @@ body{
    display: flex;
    justify-content: space-evenly;
    align-items: center;
+   flex-wrap: wrap;
+   gap: 1rem;
 }
 
 
@@ -173,6 +130,8 @@ body{
    width: 200px;
    justify-content: center;
    align-items: center;
+   color: #f6f4e6;
+   text-decoration: none;
 }
 
 .first-title h2{
@@ -259,60 +218,14 @@ body{
    justify-content: space-evenly;
 }
 
-.logout{
-   color: #f6f4e6;
-   text-decoration: none;
-   font-size: 25px;
-   background-color: #A60000;
-   padding: 5px;
-   border: 1px solid transparent;
-   border-radius: 10px;
-   transition: 0.2s background-color ease;
-}
-
-.logout:hover{
-   cursor: pointer;
-   background-color: #7a0202;
-}
-
-.form{
+.d-flex2{
    display: flex;
-   flex-direction: column;
-   width: 100%;
-   margin: 10rem auto;
-   align-items: center;
-   justify-content: center;
+   flex-wrap: wrap;
+   height: 100%;
 }
 
-.form label{
-   color: white;
-   font-size: 25px;
-   margin: 1rem 0;
-}
 
-.form button{
-   background-color: #01b4c6;
-   margin-top: 2rem;
-   color: white;
-   text-transform: uppercase;
-   font-weight: bold;
-   padding: 1rem;
-   border: 1px solid transparent;
-   border-radius: 10px;
-   transition: 0.2s background-color ease;
-}
 
-.warning {
-   border: solid red 1px;
-   border-radius: 0.2em;
-   text-align: center;
- }
- 
- .danger {
-   font-size: 15px;
-   color: red;
-   text-align: center;
- }
 
 .form button:hover{
    cursor: pointer;
@@ -323,6 +236,7 @@ body{
    display: flex;
    height: 100vh;
    background-color: rgb(0, 0, 0, 0.8);
+   width: 100%;
 }
 
 

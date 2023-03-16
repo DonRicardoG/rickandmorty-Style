@@ -1,0 +1,56 @@
+.aboutDiv{
+    width: 75%;
+    height: 600px;
+    background-color: rgb(0, 0, 0,0.6);
+    margin: auto;
+    margin-top: 6rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.img{
+    width: 50%;
+    background-image: url(../photos/aboutus2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    margin: auto 2rem;
+    border: 1px solid transparent;
+    border-radius: 0 20px 20px 0;
+}
+
+.text{
+    width: 50%;
+    text-align: center;
+}
+
+.text h1{
+    color: #AFE067;
+}
+
+.text p{
+    color: white;
+    font-size: 32px;
+    padding: 1.5rem;
+}
+
+.text button{
+    background-color: #68843F;
+    width: 35%;
+    margin: 0 auto;
+    height: 41px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.2s background-color ease;
+    text-transform: uppercase;
+}
+
+.text button:hover{
+    background-color: #4f6430;
+    cursor: pointer;
+}

@@ -1,12 +1,13 @@
 import './App.css'
-import Cards from './components/Cards.jsx'
 import "./fonts/get_schwifty.ttf"
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
 import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
-import About from './components/About'
-import Detail from './components/Detail'
+import About from './components/About/About'
+import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
+import Home from './components/Home/Home'
+import Characters from './components/Characters/Characters'
 
 function App () {
 
@@ -52,20 +53,22 @@ function App () {
 
   return (
     <div>
-      {location.pathname === '/' ? '' : <Navbar
-        onSearch = {onSearch}
-        setCharacters = {setCharacters}
-      />}
+      {(location.pathname === '/') || (location.pathname === '/characters') ? '' : <Navbar/>}
+      <div className='d-flex2'>
       <Routes>
         <Route path='/' element={<Form login ={login}/>} />
-        <Route path='/home' element={
-          <Cards 
-            characters = {characters}
-            onClose ={onClose}
-          />} />
+        <Route path='/home' element={<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/detail/:detailId' element={<Detail/>}/>
+        <Route path='/characters' element={<Characters 
+          onClose = {onClose} 
+          characters={characters}
+          onSearch = {onSearch}
+          setCharacters = {setCharacters}
+        />} />
       </Routes>
+      </div>
+      
     </div>
   )
 }
