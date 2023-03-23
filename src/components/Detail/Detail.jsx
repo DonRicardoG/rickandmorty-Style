@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import style from '../Detail/detail.module.css'
 
-
 const Detail = () => {
   const [character, setCharacter] = useState({});
   const {detailId} = useParams();
@@ -23,19 +22,19 @@ const Detail = () => {
 
   return (
     <div className={style.dflex}>
-      <div className='detail-card'>
-        <div className='detail-text'>
+      <div className={style.content}>
+        <div className={style.text}>
           <h1>Nombre: <span>{character.name}</span></h1>
           <h1>Status: <span>{character.status}</span></h1>
           <h1>Gender: <span>{character.gender}</span></h1>
           <h1>Origin: <span>{character.origin?.name}</span></h1>
           <h1>Especie: <span>{character.species}</span></h1>
         </div>
-        <div>
-          <img src={character.image} alt="not found" />
+        <div className={style.imgDiv}>
+          <img className={style.img} src={character.image} alt="not found" />
         </div>
       </div>
-      <button className='detail-btn' onClick={() => navigate('/home')}>Volver</button>
+      <button className={style.btn} onClick={() => navigate('/home')}>Volver</button>
     </div>
     
   )

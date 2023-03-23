@@ -53,7 +53,7 @@ function App () {
 
   return (
     <div>
-      {(location.pathname === '/') || (location.pathname === '/characters') ? '' : <Navbar/>}
+      {(location.pathname === '/') ? '' : <Navbar/>}
       <div className='d-flex2'>
       <Routes>
         <Route path='/' element={<Form login ={login}/>} />
