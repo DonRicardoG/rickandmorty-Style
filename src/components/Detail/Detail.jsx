@@ -34,7 +34,7 @@ const Detail = () => {
           <img className={style.img} src={character.image} alt="not found" />
         </div>
       </div>
-      <button className={style.btn} onClick={() => navigate('/home')}>Volver</button>
+      <button className={style.btn} onClick={() => navigate('/characters')}>Volver</button>
     </div>
     
   )

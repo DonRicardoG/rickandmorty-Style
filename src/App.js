@@ -8,6 +8,7 @@ import Detail from './components/Detail/Detail'
 import Form from './components/Form/Form'
 import Home from './components/Home/Home'
 import Characters from './components/Characters/Characters'
+import Favorites from './components/Favorites/Favorites'
 
 function App () {
 
@@ -66,6 +67,7 @@ function App () {
           onSearch = {onSearch}
           setCharacters = {setCharacters}
         />} />
+        <Route path='/favorites' element={<Favorites/>}/>
       </Routes>
       </div>
       
